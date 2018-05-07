@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对多个元素使用box-flex属性</title>
+    <style>
+        /* 第一个元素box-flex属性值为2，后两个元素box-flex属性值为1，第一个元素属性的值并不等于后两个元素属性值的2倍 */
+
+        #container {
+            width: 500px;
+            height: 300px;
+            border: 5px solid blue;
+            display: -moz-box;
+            display: -webkit-box;
+            -moz-box-orient: vertical;
+            -webkit-box-orient: vertical;
+        }
+
+        /*  #container {
+            width: 500px;
+            height: 300px;
+            border: 5px solid blue;
+            display: -moz-box;
+            display: -webkit-box;
+            -moz-box-orient: horizontal;
+            -webkit-box-orient: horizontal;
+        } */
+
+        #text1 {
+            -moz-box-flex: 2;
+            -webkit-box-flex: 2;
+            background-color: orange;
+        }
+
+        #text2 {
+            -moz-box-flex: 1;
+            -webkit-box-flex: 1;
+            background-color: yellow;
+        }
+
+        #text3 {
+            -moz-box-flex: 1;
+            -webkit-box-flex: 1;
+            background-color: limegreen;
+        }
+
+        #text1,
+        #text2,
+        #text3 {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>多个元素排列，对其中一个元素使用box-flex属性</h1>
+    <p>使用弹性盒布局时，使用box-flex属性的元素宽与高度会自动扩大，使得参与排列的元素总高度与总宽度始终等于容器元素宽度与高度</p>
+    <div id="container">
+        <div id="text1">示例文字1</div>
+        <div id="text2">示例文字2</div>
+        <div id="text3">示例文字3</div>
+    </div>
+</body>
+
+</html>

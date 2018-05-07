@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制变形图形</title>
+    <script type="text/javascript" src="script1.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>矩阵变换实例</h1>
+    <h2>使用图形上下文对象的transform方法替换坐标原点变换的方法</h2>
+    <p>context.transform(Math.cos(angle*Math.PI/180),Math.sin(angle*Math.PI/180),-Math.sin(angle*Math.PI/180),Math.cos(angle*Math.PI/180),0,0)</p>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

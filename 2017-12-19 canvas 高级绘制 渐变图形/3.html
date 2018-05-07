@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制变形图形</title>
+    <script type="text/javascript" src="script3.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>坐标变换</h1>
+    <p>坐标变换就可以实现图形变形处理</p>
+    <h2>坐标变换的三种方式</h2>
+    <ul>
+        <li>平移
+            <p>使用图形上下文对象的translate方法移动坐标轴原点，context.translate(x,y),两个参数分别为，将坐标轴原点向左移动多少个单位，将坐标轴原点向下移动多少个单位。</p>
+        </li>
+        <li>扩大
+            <p>将图形扩大，使用图形上下文对象的scale方法，context.scale(x,y),两个参数分别指的是，水平方向的放大倍数，垂直方向的放大倍数。</p>
+            <p>将图形缩小的时候，将两个参数设为0-1之间的小数即可，例如：0.5是将图形缩小一半。</p>
+        </li>
+        <li>旋转
+            <p>使用图形上下文对象的rotate方法将图形进行旋转</p>
+            <p>context.rotate(angle),只有一个参数，旋转角度，旋转的中心是坐标轴原点，旋转以顺时针旋转，想要逆时针旋转只需将参数angle设置为负整数即可</p>
+        </li>
+    </ul>
+    <h3>
+        结合坐标变换的三种方式绘制变形长方形
+    </h3>
+
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

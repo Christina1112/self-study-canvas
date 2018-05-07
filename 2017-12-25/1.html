@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>使用图像</title>
+    <script type="text/javascript" src="script1.js"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>绘制图像</h1>
+    <p>html5中，不仅可以使用canvas API绘制图形，还可以读取磁盘或网络中的图像文件，然后使用canvas API将该图形绘制在画布上</p>
+    <h2>绘制图像时，需要使用drawImage方法</h2>
+    <ul>
+        <li>context.draw(image,x,y)
+            <p>第一种方式有三个参数，第一个参数image可以是img元素，也可以是video元素或者一个JavaScript中的Image对象，使用该参数代表的实际对象来装载图像文件</p>
+            <p>x,y为绘制图像时该图像在画布中的起始坐标</p>
+        </li>
+        <li>
+            context.draw(image,x,y,w,h)
+            <p>前三个参数与第一种方法使用方法是一样的，后面两个参数w,h代表绘制图像的宽度和高度,第一种方法中省略了这两个参数，故图像与原图像大小相同，第二种方法可以用来进行图像缩放</p>
+        </li>
+        <li>
+            context.draw(image,sx,sy,sw,sh,dx,dy,dw,dh)
+            <p>第三种方法是将画布中已绘制好的图像的全部或者局部区域复制到画布中的两一个位置，有9个参数，image图像为原图像，s开头的参数分别为，源图像的被复制区域在画布中起始横纵坐标以及图像的寛高，d开头的为复制后的图像在画布中的横纵坐标以及寛高</p>
+            <p>该方法可以复制图像的局部，只要将sx,sy参数设为起始点横纵坐标即可，将sw,sh设置为局部图像的寛高即可</p>
+            <p>该方法也可以将源图像<strong>(源图像指的是图像的实际大小，而不是显示在指定区域的图片大小)</strong>进行缩放，只需要修改复制后图像的寛高即可</p>
+        </li>
+    </ul>
+    <ul>
+        <p>绘制图像的步骤</p>
+        <ol>1、绘制图像时首先使用不带参数的new创建一个image对象</ol>
+        <ol>2、然后设置image对象的src属性为需要绘制图像文件的路径,代码如下
+            <p>
+                image = new Image();
+                image.src = "1.jpg" //设置图像路径
+            </p>
+        </ol>
+        <ol>3、然后就可以使用drawImage方法绘制图像文件了，事实上，即使设定好对象的src属性后也不一定立刻能把图像绘制完毕，因为有时候这个图像文件是一个来自网络的比较大的图像文件，这样就只能等待图像装载完毕后才能看到图像</ol>
+        <ol>4、这样的话只需要使用image.onload = function(绘制图像的函数)，就可以解决问题了</ol>
+    </ul>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制图像</title>
+    <script type="text/javascript" src="script1.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>图像剪裁</h1>
+    <p>canvas API图像剪裁功能指的是，在画布内使用路径，只绘制该路径所包括区域的图像，不绘制路径外部的图像</p>
+    <p>使用图像上下文对象的不带参数的clip方法</p>
+    <p>此方法使用路径来对canvas画布来设置一个剪裁区域，因此必须要先创建一个路径，路径创建完后，调用clip方法设置裁剪区域</p>
+    <p></p>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

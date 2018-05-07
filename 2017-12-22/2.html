@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图形组合</title>
+    <script type="text/javascript" src="script2.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>图形的组合方式</h1>
+    <p>图形上下文的globalCompositeOperation属性可以决定图形组合方式，context.globalCompositeOperation=type</p>
+    <p>type的值仅为以下几种字符串之一:</p>
+    <ul>
+        <li>
+            source-over(默认值)
+            <p>source-over为globalCompositeOperation属性的默认值，表示新图形覆盖在原有图形之上。</p> 
+        </li>
+        <li>
+            destination-over
+            <p>表示在原有图形之下绘制新图形</p>
+     。   </li>
+        <li>
+            source-in
+            <p>在新图形与原有图形之间做in运算，只显示新图形中与原有图形重叠的部分，新图形与原有图形的其他部分都变成透明。</p>
+        </li>
+        <li>
+            destination-in
+            <p>在原有图形与新图形之间做in运算，只显示原有图形与新图形相重叠的部分，新图形与原有图形的其他部分都变成透明</p>
+        </li>
+        <li>
+            source-out
+            <p>新图形与原图形做out运算，只显示新图形与原图形不重叠的部分，新图形与原有图形的其他部分均变成透明</p>
+        </li>
+        <li>
+            destination-out
+            <p>在原有图形与新图形之间做out运算，只显示原有图形与新图形不重叠的部分，新图形与原有图形的其他部分都变成透明</p>
+        </li>
+        <li>
+            source-atop
+            <p>指绘制新图形与原有图形重叠的部分与未被重叠覆盖的原有图形，新图形的其他部分变成透明</p>
+        </li>
+        <li>
+            destination-atop
+            <p>只绘制原有图形中被新图形重叠覆盖的部分与新图形的其他部分，原有图形的其他部分变成透明，不绘制新图形中与原有图形相重叠的部分</p>
+        </li>
+        <li>
+            lighter
+            <p>原有图形与新图形均绘制，重叠部分做加色处理</p>
+        </li>
+        <li>
+            xor
+            <p>只绘制新图形中与原有图形不重叠的部分，重叠部分变成透明</p>
+        </li>
+        <li>
+           copy
+            <p>只绘制新图形，原有图形中未与新图形重叠的部分变成透明</p>
+        </li>
+        <p><strong>如果指定的type类型不在这几个字符串当中，则按照默认方式组合图形</strong></p>
+    </ul>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

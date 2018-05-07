@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制变形图形</title>
+    <script type="text/javascript" src="script1.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>绘制变形五角星</h1>
+    <p>对矩形实现图形变换用坐标变换就够了，但是如果是通过路径绘制的图形进行变换就要考虑比较多了，<br>因为使用了坐标变换后，已经创建好的路径就不能使用了，必须要重新创建路径，重新创建好路径后，坐标变换方法又失效了，<br>所以必须<strong>先创建好一个路径函数，变换坐标同时调用路径函数</strong>，才能解决这个问题。</p>
+    <p>坐标变换与路径结合实例</p>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

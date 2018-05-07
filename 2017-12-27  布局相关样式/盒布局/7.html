@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>元素寛高自适应</title>
+    <style>
+        /* 使用盒布局时，元素的寛高具有自适应性，即元素的寛高可以根据排列方向的改变而改变 */
+        
+        #container {
+            width:500px;
+            height:300px;
+            border:5px solid blue;
+            display: -moz-box;
+            display: -webkit-box;
+            -moz-box-orient: vertical;
+            -webkit-box-orient: vertical;
+        }
+        #container {
+            width:500px;
+            height:300px;
+            border:5px solid blue;
+            display: -moz-box;
+            display: -webkit-box;
+            -moz-box-orient: horizontal;
+            -webkit-box-orient: horizontal;
+        }
+        #text1{
+            background-color: orange;
+        }
+        #text2{
+            background-color: yellow;
+        }
+        #text3{
+            background-color: limegreen;
+        }
+        #text1,#text2,#text3{
+            -moz-box-sizing:border-box;
+            -webkit-box-sizing:border-box;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        
+    </style> 
+</head>
+
+<body>
+    <h1>元素寛高自适应</h1>
+    <p>从该事例中可以看出，排列方向为垂直方向时，高度为元素内容高度，宽度为容器container的宽度</p>
+    <p>排列方向为水平方向时，宽度为元素内容高度，宽度自动适应为container容器的高度</p>
+    <div id="container">
+        <div id="text1">示例文字1</div>
+        <div id="text2">示例文字2</div>
+        <div id="text3">示例文字3</div>
+    </div>
+</body>
+
+</html>

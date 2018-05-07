@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制径向渐变</title>
+    <script type="text/javascript" src="script2.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>径向渐变</h1>
+    <p><strong>径向渐变</strong>，指的是沿着圆形的半径方向向外进行扩散的渐变方式</p>
+    <p><strong>径向渐变的方法</strong>，使用图形上下文的createRadialGradient方法绘制径向渐变</p>
+    <p>context.createRadialGradient(xStart,yStart,radiusStart,xEnd,yEnd,radiusEnd),六个参数分别为，渐变开始圆的圆心横坐标，渐变开始圆的圆心纵坐标，开始圆的半径，渐变结束圆的圆心横坐标，渐变结束圆的圆心纵坐标，结束圆的半径</p>
+    <p>径向渐变设置颜色与线性渐变相同，都是使用addColorStop方法，同样也需要设置0-1之间的浮点数作为渐变转折点的偏移量</p>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

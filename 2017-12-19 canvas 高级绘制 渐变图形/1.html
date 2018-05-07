@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制线性渐变</title>
+    <script type="text/javascript" src="script1.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>绘制线性渐变</h1>
+    <p>前面学到fillStyle方法在填充时指定填充颜色，其实，使用该方法，除了指定颜色话可以指定填充的对象。</p>
+    <p>渐变，渐变指的是在填充时从一种颜色慢慢过渡到另外一种颜色。</p>
+    <p>绘制线性渐变需要使用到LinearGradient对象，使用图形上下文的createLinearGradient方法创建该对象。</p>
+    <h2>创建LinearGradient对象的方法</h2>
+    <p>context.createLinearGradient(xStart,yStart,xEnd,yEnd),四个参数，参数分别为，渐变起始地点的横坐标，渐变起始地点的纵坐标，渐变结束地点的横坐标，渐变结束地点的纵坐标。</p>
+    <h2>设定渐变颜色</h2>
+    <p>context.addColorStop(offset,color),两个参数，分别为，设定颜色离开渐变起始点的偏移量（值为0-1之间的浮点值，渐变起始点的偏移量为0，渐变结束点的偏移量为1），color是绘制时使用的颜色。</p>
+    <p>因为是渐变，所以需要两次使用addColorStop方法追加两个颜色（开始颜色和结束颜色），也可以追加多个颜色。</p>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

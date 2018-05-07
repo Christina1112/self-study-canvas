@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数表达式</title>
+</head>
+<body>
+    <div>
+        <h1>函数表达式</h1>
+        <p>函数表达式语法:<br/>
+            var functionName = function(){<br/>
+                &nbsp //函数体<br/>
+             }
+        </p>
+        <p>这种形式看起来像是常规变量赋值语句，即创建一个函数并将它赋值给一个变量，这种情况下创建的函数(anonymous function)叫<strong>匿名函数（别名“拉姆达函数”）</strong>，因为function关键字后面没有标识符，</p>
+        <p>函数表达式与其他表达式一样，想要使用必须先赋值</p>
+    </div>
+    <script type="text/javascript">
+        var functionName = function(){
+            //函数体
+        }
+
+        //能够创建一个函数并赋值给变量，也就能够把函数作为其他函数的值返回,把函数当成值来使用的情况下，都可以使用匿名函数
+
+        function createComparisonFunction(propertyName){
+            return function (obj1,obj2){
+                var value1 = obj1[propertyName];
+                var value2 = obj2[propertyName];
+
+                if(value1<value2){
+                    return -1;
+                }else if(value1>value2){
+                    return 1;
+                }else{
+                    return 0;
+                }
+
+            } ;
+        }
+        createComparisonFunction();
+
+
+
+
+    </script>
+</body>
+</html>

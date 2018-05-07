@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制图形</title>
+    <script type="text/javascript" src="script3.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>给图形绘制阴影</h1>
+    <p>canvas可以用来给图形添加阴影效果，只需利用图形上下文的几个关于阴影绘制的属性就可以了</p>
+    <ul>
+        <li>
+            <p>shadowOffsetX——阴影的横向位移矢量，一般情况下默认值均为0</p>
+        </li>
+        <li>
+            <p>shadowOffsetY——阴影的纵向位移矢量，一般情况下默认值均为0</p>
+        </li>
+        <li>
+            <p>shadowColor——阴影的颜色</p>
+        </li>
+        <li>
+            <p>shadowBlur——阴影的模糊范围，此属性是可选属性，设定该属性值时，必须要设定为比0大的值，否则将被忽略，一般设定0-10之间的值，开发时可自动调整这个数值，以达到满意效果</p>
+        </li>
+    </ul>
+    <img src="./circle.jpg" />
+    <p style="color:red;">以上几个绘制阴影效果属性与路径无关，<strong style="color:black;">下面实例为绘制五角星阴影效果实例</strong></p>
+    
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

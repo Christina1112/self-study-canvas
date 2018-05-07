@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图像平铺</title>
+    <script type="text/javascript" src="script4.js" charset="gb2312"></script>
+</head>
+<body onload="draw('canvas')">
+    <h1>图像平铺简易方法</h1>
+    <p>context.createPattern(image,type),type参数的值必须为以下<strong>字符串</strong></p>
+    <ul>
+        <li>no-repeat——不平铺</li>
+        <li>repeat-x——x轴平铺</li>
+        <li>repeat-y——y轴平铺</li>
+        <li>repeat——全方位平铺</li>
+    </ul>
+    <canvas id="canvas" width="800px" height="600px"></canvas>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数声明与函数表达式</title>
+</head>
+<body>
+    <div>
+        <h1>函数声明</h1>
+        <p>定义函数的方式有两种：</p>
+        <ul>
+            <li>
+                <p>函数声明，由关键字function、函数名和函数体组成,这就是指定函数名的方式，Firefox、Safari、Chrome和Opera都给函数定义了一个非标准的name属性，通过这个属性可以访问到给函数指定的函数名，这个属性的值永远等于跟在function关键字后面的标识符</p>
+                <p>函数声明的重要特征是：函数声明提升，即在执行代码之前会先读取函数声明，即函数声明可以放在调用它的语句后面。</p>
+            </li>
+            <li>
+                函数表达式，函数表达式：<br/>
+                var functionName = function(){<br/>
+                    &nbsp&nbsp//函数体<br/>
+                }
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+
+
+       /*  function functionName(arg0,arg1,arg2){
+            //函数体
+            console.log('打印函数名');
+        }
+        console.log(functionName.name); */
+
+        /* console.log(addNum(1, 2, 3)); //函数声明提升
+
+        function addNum(a,b,c){
+            return a+b+c;
+        }
+        // console.log(addNum(1,2,3)); */
+
+    sayHi(); // 函数声明提升
+    function sayHi(){
+        alert('hi');
+    }
+
+
+    </script>
+</body>
+</html>
